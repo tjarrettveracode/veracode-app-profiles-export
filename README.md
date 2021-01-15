@@ -1,16 +1,16 @@
-# Veracode Static BOM
+# Veracode App Profiles Export
 
-Get a quick list of modules with findings identified by a Veracode static scan.
+Export a list of applications and all the profile properties to CSV.
 
 ## Setup
 
 Clone this repository:
 
-    git clone https://github.com/tjarrettveracode/veracode-static-bom
+    git clone https://github.com/tjarrettveracode/veracode-app-profiles-export
 
 Install dependencies:
 
-    cd veracode-static-bom
+    cd veracode-app-profiles-export
     pip install -r requirements.txt
 
 (Optional) Save Veracode API credentials in `~/.veracode/credentials`
@@ -23,20 +23,19 @@ Install dependencies:
 
 If you have saved credentials as above you can run:
 
-    python vcstaticbom.py (arguments)
+    python vcappprofiles.py (arguments)
 
 Otherwise you will need to set environment variables:
 
     export VERACODE_API_KEY_ID=<YOUR_API_KEY_ID>
     export VERACODE_API_KEY_SECRET=<YOUR_API_KEY_SECRET>
-    python vcstaticbom.py (arguments)
+    python vcappprofiles.py (arguments)
 
 Arguments supported include:
 
-* --appid, -a  (opt): application guid for which to list a bill of materials.
+* --appid, -a  (opt): application guid for which to list all attributes.
 * --all, -l (opt): If set, checks all applications.
 
 ## NOTES
 
-1. Initial version of the script only reports on modules found in policy scans.
-1. All values are output to vcstaticbom.csv
+1. All values are output to vcappprofiles.csv
